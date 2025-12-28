@@ -82,6 +82,7 @@ This approach allows **small, controlled adaptation** of CLIP embeddings to the 
 **Final Performance**
 - Recall@10 ≈ **69.7%**
 - Consistent improvements across Recall@1 / Recall@5 / MRR
+```
 
 ---
 
