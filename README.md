@@ -101,7 +101,7 @@ Vector Database (FAISS / Milvus)
 ANN Search
    ↓
 Top-K Product Images
-
+---
 ## 📊 Evaluation
 
 **Metrics**
