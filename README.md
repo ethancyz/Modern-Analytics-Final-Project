@@ -102,7 +102,9 @@ ANN Search
    ↓
 Top-K Product Images
 (Image embeddings follow the same pipeline symmetrically.)
+
 ---
+
 ## 📊 Evaluation
 
 **Metrics**
@@ -121,6 +123,7 @@ Top-K Product Images
 - Qualitative visualization of retrieved images
 - Detailed error analysis across different query types
 
+---
 
 ## 🧠 Assistant / TA Comments (Original)
 
@@ -141,6 +144,7 @@ Excellent work on the detailed error analysis across models.
 **Business Case & Deployment**  
 The report could be strengthened with a more thorough discussion of the business case, development plan, and potential deployment considerations.
 
+---
 
 ## 🧠 Project Reflection (Response to Feedback)
 
@@ -155,6 +159,7 @@ The report could be strengthened with a more thorough discussion of the business
 - Fine-tuning strategy could be explored more systematically
 - Business case and deployment considerations were not deeply analyzed
 
+---
 
 ## 🚀 Future Work
 
@@ -164,6 +169,7 @@ The report could be strengthened with a more thorough discussion of the business
 - Integration with a generative layer for multimodal RAG systems
 - Latency benchmarking and production indexing strategy
 
+---
 
 ## 📌 Summary
 
