@@ -102,78 +102,71 @@ ANN Search
    ↓
 Top-K Product Images
 (Image embeddings follow the same pipeline symmetrically.)
+---
+## 📊 Evaluation
 
-📊 Evaluation
-Metrics
-Recall@1
+**Metrics**
+- Recall@1
+- Recall@5
+- Recall@10
+- MRR
 
-Recall@5
+**Models Compared**
+- Zero-shot CLIP
+- Naive two-tower MLP
+- Residual Adapter + InfoNCE (ours)
 
-Recall@10
+**Analysis**
+- Quantitative retrieval metrics
+- Qualitative visualization of retrieved images
+- Detailed error analysis across different query types
 
-MRR
 
-Models Compared
-Zero-shot CLIP
+## 🧠 Assistant / TA Comments (Original)
 
-Naive two-tower MLP
-
-Residual Adapter + InfoNCE (ours)
-
-Analysis
-Quantitative retrieval metrics
-
-Qualitative visualization of retrieved images
-
-Detailed error analysis across different query types
-
-🧠 Assistant / TA Comments (Original)
-Comments
-This project develops a multimodal text-to-image retrieval system for e-commerce.
-Building on the pretrained CLIP model, the work follows an iterative experimental process:
-starting with a naive two-tower MLP, comparing performance with a zero-shot CLIP baseline,
+**Comments**  
+This project develops a multimodal text-to-image retrieval system for e-commerce.  
+Building on the pretrained CLIP model, the work follows an iterative experimental process:  
+starting with a naive two-tower MLP, comparing performance with a zero-shot CLIP baseline,  
 and ultimately designing a residual projection head trained with InfoNCE loss.
 
 You experimented with fine-tuning, temperature parameters, and InfoNCE loss, demonstrating strong effort to improve model performance despite the challenges.
 
-Implementation
+**Implementation**  
 The report would benefit from more detail on the fine-tuning process, hyperparameter-tuning strategy, and the rationale behind specific choices (e.g., why alpha = 0.2 in the residual projection head).
 
-Results and Evaluation
+**Results and Evaluation**  
 Excellent work on the detailed error analysis across models.
 
-Business Case & Deployment
+**Business Case & Deployment**  
 The report could be strengthened with a more thorough discussion of the business case, development plan, and potential deployment considerations.
 
-🧠 Project Reflection (Response to Feedback)
-What Worked Well
-Identified and diagnosed catastrophic misalignment early
 
-Systematic comparison between naive fine-tuning and CLIP baseline
+## 🧠 Project Reflection (Response to Feedback)
 
-Effective use of residual adapters to preserve semantic alignment
+**What Worked Well**
+- Identified and diagnosed catastrophic misalignment early
+- Systematic comparison between naive fine-tuning and CLIP baseline
+- Effective use of residual adapters to preserve semantic alignment
+- Strong quantitative and qualitative evaluation
 
-Strong quantitative and qualitative evaluation
+**Limitations**
+- Hyperparameter choices (e.g., residual scaling factor α) were not fully ablated
+- Fine-tuning strategy could be explored more systematically
+- Business case and deployment considerations were not deeply analyzed
 
-Limitations
-Hyperparameter choices (e.g., residual scaling factor α) were not fully ablated
 
-Fine-tuning strategy could be explored more systematically
+## 🚀 Future Work
 
-Business case and deployment considerations were not deeply analyzed
+- Partial unfreezing of CLIP backbone (Stage B fine-tuning)
+- Hard negative mining for contrastive learning
+- Larger-scale deployment with FAISS or Milvus
+- Integration with a generative layer for multimodal RAG systems
+- Latency benchmarking and production indexing strategy
 
-🚀 Future Work
-Partial unfreezing of CLIP backbone (Stage B fine-tuning)
 
-Hard negative mining for contrastive learning
+## 📌 Summary
 
-Larger-scale deployment with FAISS or Milvus
+This project demonstrates that effective domain adaptation of CLIP does not require full retraining.
 
-Integration with a generative layer for multimodal RAG systems
-
-Latency benchmarking and production indexing strategy
-
-📌 Summary
-This project shows that effective domain adaptation of CLIP does not require retraining or aggressive fine-tuning.
-
-Instead, lightweight residual adapters combined with contrastive learning can significantly improve retrieval performance while preserving CLIP’s pretrained semantic structure, making this approach practical and scalable for real-world e-commerce systems.
+Lightweight residual adapters combined with contrastive learning can significantly improve retrieval performance while preserving CLIP’s pretrained semantic structure.
