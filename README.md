@@ -104,6 +104,8 @@ ANN Search
 Top-K Product Images
 (Image embeddings follow the same pipeline symmetrically.)
 
+```
+
 ---
 
 ## 📊 Evaluation
